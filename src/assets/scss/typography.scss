@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+
+html,
+body {
+    font-family: "OpenSans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 34px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        font-size: 50px;
+        line-height: 54px;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}

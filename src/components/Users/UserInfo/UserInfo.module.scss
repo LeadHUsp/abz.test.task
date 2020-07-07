@@ -1,0 +1,40 @@
+.user_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    p {
+        margin: 0;
+        cursor: pointer;
+    }
+
+    h2 {
+        cursor: pointer;
+    }
+}
+
+.user_avatar {
+    width: 24%;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.tool_tip {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background: #323231;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user_info_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 55px;
+}

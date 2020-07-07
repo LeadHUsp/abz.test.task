@@ -1,0 +1,38 @@
+header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .nav_container {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-left: 33.33333%;
+    }
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            font-size: 14px;
+            padding-left: 29px;
+            text-align: right;
+        }
+    }
+}
