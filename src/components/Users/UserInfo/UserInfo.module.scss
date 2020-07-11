@@ -38,3 +38,9 @@
     align-items: center;
     margin-top: 55px;
 }
+
+@media (min-width: 0) and (max-width: 575px) {
+    .user_info_wrapper {
+        margin-top: 40px;
+    }
+}

@@ -110,7 +110,7 @@ class Form extends React.Component {
     return (
       <section className={s.form_wrapper}>
         <h1>Register to get a work</h1>
-        <div className="col-lg-6 mx-auto">
+        <div className="col-lg-6 col-md-8 mx-auto">
           <h3>
             Attention! After successful registration and alert, update the list
             of users in the block from the top

@@ -26,7 +26,7 @@ const UserInfo = ({ user }) => {
     setCoords({ x: 0, y: 0 });
   };
   return (
-    <div className={`col-lg-4 ${s.user_info_wrapper}`}>
+    <div className={`col-lg-4 col-md-4 ${s.user_info_wrapper}`}>
       <img src={user.photo} alt="avatar" className={s.user_avatar} />
       <div
         className={s.user_info}

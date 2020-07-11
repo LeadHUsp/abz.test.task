@@ -15,8 +15,12 @@ class Users extends React.Component {
     };
   }
   async getData(page = 1) {
+    let count;
+    if (window.innerWidth < 767) {
+      count = 3;
+    } else count = 6;
     try {
-      let res = await getUsers(page);
+      let res = await getUsers(page, count);
       this.setState((prevState) => ({
         users: prevState.users.concat(res.data.users),
         page: res.data.page,

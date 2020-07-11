@@ -1,38 +1,125 @@
 header {
-    height: 60px;
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  position: static;
 }
 
 .nav {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .logo {
     display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+    align-items: center;
+  }
 
-    .logo {
-        display: flex;
-        align-items: center;
+  .menu_toggler {
+    display: none;
+    background: none;
+    border: none;
+    background: url(../../assets/img/menu-icon.svg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
 
+    &:focus {
+      outline: none;
     }
+  }
 
+  .show {
+    left: 0 !important;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s all;
+
+    li {
+      list-style: none;
+      font-size: 14px;
+      padding-left: 29px;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (min-width: 0) {
+  header {
+    height: 40px;
+  }
+
+  .nav {
     .nav_container {
-        flex: 0 0 50%;
-        max-width: 50%;
-        margin-left: 33.33333%;
-    }
+      margin-left: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: static;
 
-    ul {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin: 0;
-        padding: 0;
+      .menu_toggler {
+        display: block;
+        width: 20px;
+        height: 15px;
+      }
+
+      ul {
+        width: 80%;
+        flex-direction: column;
+        position: absolute;
+        background: #fff;
+        left: -80%;
+        top: 40px;
+        align-items: flex-start;
+        z-index: 9999;
 
         li {
-            list-style: none;
-            font-size: 14px;
-            padding-left: 29px;
-            text-align: right;
+          font-size: 16px;
+          text-align: left;
+          padding: 15px;
         }
+      }
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 60px;
+  }
+
+  .nav {
+    .nav_container {
+      ul {
+        width: 50%;
+        top: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .nav {
+    .nav_container {
+      position: relative;
+
+      .menu_toggler {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        top: 0;
+        width: auto;
+      }
+    }
+  }
 }

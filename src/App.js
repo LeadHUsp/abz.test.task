@@ -13,20 +13,21 @@ class App extends Component {
       <>
         <NavBar />
         <section className="banner-wrapper">
-          <div className="container ">
-            <h1 className="col-lg-7">
+          <div className="container">
+            <h1 className="col-lg-7 col-md-8">
               Test assignment
               <br /> for Frontend Developer position
             </h1>
-            <p className="col-lg-7">
+            <p className="col-lg-7 col-md-8">
               We kindly remind you that your test assignment should be submitted
-              <br />
-              as a link to github/bitbucket repository. Please be patient, we
-              consider and respond to every application that meets minimum
-              requirements.
-              <br />
-              We look forward to your submission. Good luck! The photo has to
-              scale in the banner area on the different screens
+              as a link to github/bitbucket repository.
+              <span>
+                Please be patient, we consider and respond to every application
+                that meets minimum requirements.
+                <br />
+                We look forward to your submission. Good luck! The photo has to
+                scale in the banner area on the different screens
+              </span>
             </p>
             <Button text={"Sign up now"} />
           </div>
@@ -35,14 +36,14 @@ class App extends Component {
           <div className="container">
             <h1>Let's get acquainted</h1>
             <div className="row px-0">
-              <div className="col-lg-5 about_img">
+              <div className="col-lg-5 col-md-5 col-12 about_img">
                 <img
                   src={about_img}
                   srcSet={`${about_img_2x} 2x, ${about_img_3x} 3x`}
                   alt="developer"
                 />
               </div>
-              <div className="col-lg-7 about-text">
+              <div className="col-lg-7 col-md-7 about-text">
                 <h2>I am cool frontend developer</h2>
                 <p>
                   We will evaluate how clean your approach to writing CSS and
@@ -61,6 +62,9 @@ class App extends Component {
           </div>
         </section>
         <Users />
+        <footer>
+          <p>&copy; abz.agency specially for the test task</p>
+        </footer>
       </>
     );
   }
