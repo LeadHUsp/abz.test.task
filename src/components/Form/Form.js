@@ -8,6 +8,7 @@ import {
   emailValidate,
   phoneNumber,
   emptyField,
+  uploadImage,
 } from "../utils/validate";
 
 class Form extends React.Component {
@@ -59,6 +60,7 @@ class Form extends React.Component {
     this.setState({
       photo: e.target.files[0],
     });
+    console.log(e.target.files[0]);
   };
   setRequire = (flag) => {
     this.setState({
@@ -160,18 +162,15 @@ class Form extends React.Component {
             </div>
             <div className={s.form_group}>
               <p>Photo</p>
-              <div className={s.upload_form}>
-                <input
-                  type="file"
-                  placeholder="Upload your photo"
-                  id="uploadInput"
-                  className={s.upload_input}
-                  onChange={this.onChangeHandler}
-                />
-                <label className={s.upload_lable} htmlFor="uploadInput">
-                  Upload your photo
-                </label>
-              </div>
+              <Input
+                type="file"
+                placeholder="Upload your photo"
+                cssClass={s.upload_input}
+                onChangeHandler={this.onChangeHandler}
+                validator={[uploadImage]}
+                errorClass={s.error}
+                formRequire={this.setRequire}
+              />
             </div>
             <div className={s.btn_wrapper}>
               <Button

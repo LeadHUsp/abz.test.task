@@ -22,3 +22,11 @@ export const emptyField = (e) => {
     return false;
   } else return true;
 };
+export const uploadImage = (e) => {
+  let file = e.target.files[0];
+  if (file) {
+    if (file.type === "image/jpeg" && file.size < 5242880) {
+      return true;
+    } else return false;
+  }
+};
