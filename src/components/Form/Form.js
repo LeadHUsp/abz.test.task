@@ -60,7 +60,7 @@ class Form extends React.Component {
     this.setState({
       photo: e.target.files[0],
     });
-    console.log(e.target.files[0]);
+    /*  console.log(e.target.files[0]); */
   };
   setRequire = (flag) => {
     this.setState({
@@ -92,7 +92,7 @@ class Form extends React.Component {
             },
           }
         );
-        console.log(res);
+        /* console.log(res); */
         if (res.status === 201) {
           this.props.updateAfterSignUp();
         }
